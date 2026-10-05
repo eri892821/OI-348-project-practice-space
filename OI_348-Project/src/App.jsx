@@ -4,7 +4,7 @@ import Budgets from './Budgets'
 
 
 function App() {
-  return <budgets/>
+  return <Budgets/>
 }
 
 export default App
