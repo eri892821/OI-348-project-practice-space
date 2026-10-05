@@ -21,6 +21,17 @@
       background: #15202b;
       color: white;
     }
+
+    table{
+        border-collapse:collapse;
+        width:100%;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #334155;
+    }
+   
     </style>
 
 </head>
@@ -36,34 +47,31 @@
     <div class="main">
       <h1>Budgets</h1>
 
-     <p> 
         <table>
+     <thead>
         <tr>
            <th>Catgory</th>
-           <th>target Amount</th>
+           <th>Target Amount</th>
            <th>Target Date</th>
            <th>Progress</th>
            <th>Spent</th>
         </tr>
-
+    </thead>
+    <tbody>
          <tr>
-           <th>Transport</th>
-           <th>R1500</th>
-           <th>30 August 2026</th>
-           <th>Progress</th>
-           <th>R870</th>
+           <td>Transport</td>
+           <td>R1500</td>
+           <td>30 August 2026</td>
+           <td>Progress</td>
+           <td>R870</td>
         </tr>
-
+        </tbody>
         </table>
-     </p>
-
+  
 
     </div>
   </div>
 
- 
 
-
-  </table>
 </body>
 </html>
