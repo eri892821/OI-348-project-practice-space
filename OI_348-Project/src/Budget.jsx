@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import './App.css'
-import { useState } from 'react'
 
 const categories = [
   { id: 1, name: 'Transport' },
