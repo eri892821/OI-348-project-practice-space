@@ -66,4 +66,4 @@ const Budgets = () => {
   )
 }
 
-export default Budgets
+export default Budget

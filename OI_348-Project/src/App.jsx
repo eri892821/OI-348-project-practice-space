@@ -1,7 +1,7 @@
-import Budgets from './App'
+import Budget from './App'
 
 function App() {
-  return <Budgets />
+  return <Budget />
 }
 
 export default App
