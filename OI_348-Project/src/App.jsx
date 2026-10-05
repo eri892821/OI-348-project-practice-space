@@ -5,7 +5,7 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
-
+  return <budgets/>
 }
 
 export default App
