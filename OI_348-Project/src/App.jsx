@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 import spendwiseLogo from './assets/Gemini_Generated_Image.jfif'
 import Budgets from './Budgets'
