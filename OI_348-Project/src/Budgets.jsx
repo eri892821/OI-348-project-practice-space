@@ -2,7 +2,7 @@ import{useState} from 'react'
 
 function Budgets(){
   const [budgets, setBudgets]=
-  UseState([
+  useState([
     {id:1, category:"Food",
       Planned: 2000,
       Actual: 1500,
@@ -19,5 +19,6 @@ function Budgets(){
     <h1>Budgets</h1>
   </div>
 );
-
 }
+
+export default Budgets
