@@ -1,5 +1,6 @@
 import{useState} from 'react'
 
+
 function Budgets(){
   const [budgets, setBudgets]=
   useState([
