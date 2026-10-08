@@ -1,7 +1,24 @@
-import Budget from './App'
+import{useState} from 'react'
+import axios from 'axios'
 
-function App() {
-  return <Budget />
+function Budgets(){
+  const [budgets, setBudgets]=
+  UseState([
+    {id:1, category:"Food",
+      Planned: 2000,
+      Actual: 1500,
+    },
+    {id:2, category:"Transport",
+    Planned: 2000,
+      Actual: 1500,
+    },
+
+  ]);
+
+  return(
+  <div>
+    <h1>Budgets</h1>
+  </div>
+);
+
 }
-
-export default App
