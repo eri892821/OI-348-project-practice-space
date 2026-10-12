@@ -42,17 +42,17 @@ function Budgets (){
       <h1> Budgets</h1>
 
     <div style={{ display: 'flex', gap: 16 }} >
-    <div style ={{background: '#e8eefc', color: '#0e63c5', padding: 16, width: 180}}>
+    <div className="card" style ={{background: '#e8eefc', color: '#0e63c5'}}>
     <p> Total Budgeted</p>
     <h2>R5000</h2>
     </div>
 
-     <div style ={{background: '#e8eefc', color: '#0e63c5', padding: 16, width: 180}}>
+     <div  className="card"  style ={{background: '#e8eefc', color: '#0e63c5'}}>
     <p> Total Spent</p>
     <h2>R4860</h2>
     </div>
     
-     <div style ={{background: '#e4771d', color: '#0e63c5', padding: 16, width: 180}}>
+     <div className="card" style ={{background: '#e4771d', color: '#0e63c5'}}>
     <p> Over Spent</p>
     <h2>R80</h2>
     <p>Entertainment</p>
@@ -95,7 +95,7 @@ function Budgets (){
             ))}
      </tbody>
    </table>
-   
+
    </div>
   </div>  
 
