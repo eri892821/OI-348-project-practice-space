@@ -3,7 +3,7 @@ import {FaCar, FaShoppingCart, FaTv} from 'react-icons/fa'
 
 function Budgets (){
   return (
-    <div>
+    <div style={{ width: 800, marginLeft: 'auto' }}>
       <h1> Budgets</h1>
 
     <div style={{ display: 'flex', gap: 16 }} >
@@ -64,7 +64,11 @@ function Budgets (){
      </tbody>
 
    </table>
-  </div>   
+  </div>  
+
+  <div style ={{border: '1px solid black', padding: 16, marginTop: 24}}>
+    Form goes here
+  </div> 
     
 </div>
 
