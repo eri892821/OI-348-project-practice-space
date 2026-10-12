@@ -1,5 +1,7 @@
 import {useState} from 'react'
+import './Budgets.css'
 import {FaCar, FaShoppingCart, FaTv} from 'react-icons/fa'
+
 
 const icons={
   Transport: <FaCar/>,
@@ -8,6 +10,32 @@ const icons={
 }
 
 function Budgets (){
+  const[budgets, setBudgets] =useState ([
+    {id:1, category:'Transport',target:1500,date:'30 Aug',spent:870},
+    {id:1, category:'Groceries',target:2500,date:'30 Aug',spent:2200},
+    {id:1, category:'Entertainment',target:500,date:'30 Aug',spent:580},
+  ])
+
+  const[category,setCategory]=useState ('')
+  const [target, setTarget]=useState('')
+  const [date, setDate]=useState('')
+
+  const handleSubmit= (event)=> {
+    event.preventDefault()
+    const newBudget={
+      id:Date.now(),
+      category:category,
+      target:Number(target),
+      date:date,
+      spent:0,
+    }
+    
+    setBudgets(budgets.concat(newBudget))
+    setCategory('')
+    setTarget('')
+    setDate('')
+
+  }
   return (
     <div>
       <h1> Budgets</h1>
@@ -44,37 +72,58 @@ function Budgets (){
      </thead>
 
      <tbody>
-       <tr>
-        <td> <FaCar/>Transport</td>
-        <td>R1500</td>
-        <td> 30 Aug</td>
-        <td>PROGRESS BAR</td>
-        <td>R870</td>
-       </tr>
-
-       <tr>
-        <td><FaShoppingCart/>Groceries</td>
-        <td>R2500</td>
-        <td>30 Aug</td>
-        <td>PROGRESS BAR</td>
-        <td>R2200</td>
-       </tr>
-
-        <tr>
-        <td><FaTv/>Entertainment</td>
-        <td>R500</td>
-        <td>30 Aug</td>
-        <td>PROGRESS BAR</td>
-        <td>R580</td>
-       </tr>
+      {budgets.map((b) => (
+              <tr key={b.id}>
+                <td>{icons[b.category]}{b.category}</td>
+                <td>R{b.target}</td>
+                <td>{b.date}</td>
+                <td>
+                  <div style={{ background: '#ddd', height: 8, width: 150 }}>
+                 <div style={{
+                       width: `${Math.min((b.spent / b.target) * 100, 100)}%`,
+                       height: '100%',
+                      background: b.spent > b.target ? 'red' : '#0e63c5',
+                      }}
+                     />
+                 </div>
+                 </td>
+                
+                <td>R{b.spent}</td>
+              </tr>
+            ))}
      </tbody>
-
    </table>
   </div>  
 
-  <div style ={{border: '1px solid black', padding: 16, marginTop: 24}}>
-    Form goes here
-  </div> 
+
+  <div style ={{ marginTop: 24}}>
+     <h3>Create a new budget</h3>
+        <form onSubmit={handleSubmit}>
+          <select value={category} onChange={(e) => setCategory(e.target.value)} required>
+            <option value="">Select category</option>
+            <option value="Transport">Transport</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Entertainment">Entertainment</option>
+          </select>
+
+          <input
+            type="number"
+            placeholder="R 0.00"
+            value={target}
+            onChange={(e) => setTarget(e.target.value)}
+            required
+          />
+
+          <input
+            type="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            required
+          />
+
+          <button type="submit">Create</button>
+        </form>
+      </div>
     
 </div>
 
