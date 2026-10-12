@@ -1,13 +1,14 @@
 .budgets-page {
-  background: #000;
-  color: white;
+  background: #d9d9d9;
+  color: #111;
   min-height: 100vh;
   padding: 24px;
 }
 
 .table-box {
   margin-top: 24px;
-  background: #1a1a1a;
+  background: #000;
+  color: white;
   border-radius: 12px;
   padding: 16px;
 }
@@ -19,7 +20,8 @@
 
 .form-box {
   margin-top: 24px;
-  background: #1a1a1a;
+  background: #000;
+  color: white;
   border-radius: 12px;
   padding: 16px;
 }

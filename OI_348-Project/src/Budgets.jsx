@@ -38,6 +38,7 @@ function Budgets (){
   }
   return (
     <div>
+      <div className="budgets-page">
       <h1> Budgets</h1>
 
     <div style={{ display: 'flex', gap: 16 }} >
@@ -59,6 +60,7 @@ function Budgets (){
  </div>
     
  <div style= {{marginTop:24}}>
+  <div classname="table-box">
 
    <table>
      <thead>
@@ -93,10 +95,13 @@ function Budgets (){
             ))}
      </tbody>
    </table>
+   
+   </div>
   </div>  
 
 
   <div style ={{ marginTop: 24}}>
+     <div className="form-box">
      <h3>Create a new budget</h3>
         <form onSubmit={handleSubmit}>
           <select value={category} onChange={(e) => setCategory(e.target.value)} required>
@@ -124,7 +129,8 @@ function Budgets (){
           <button type="submit">Create</button>
         </form>
       </div>
-    
+   </div> 
+   </div>
 </div>
 
 
