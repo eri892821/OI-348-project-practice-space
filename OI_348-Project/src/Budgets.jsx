@@ -1,9 +1,15 @@
 import {useState} from 'react'
 import {FaCar, FaShoppingCart, FaTv} from 'react-icons/fa'
 
+const icons={
+  Transport: <FaCar/>,
+  Groceries:<FaShoppingCart/>,
+  Entertainment:<FaTv/>,
+}
+
 function Budgets (){
   return (
-    <div style={{ width: 800, marginLeft: 'auto' }}>
+    <div>
       <h1> Budgets</h1>
 
     <div style={{ display: 'flex', gap: 16 }} >
