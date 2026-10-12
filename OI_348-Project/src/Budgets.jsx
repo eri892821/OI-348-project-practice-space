@@ -60,7 +60,7 @@ function Budgets (){
  </div>
     
  <div style= {{marginTop:24}}>
-  <div classname="table-box">
+  <div className="table-box">
 
    <table>
      <thead>
@@ -95,7 +95,6 @@ function Budgets (){
             ))}
      </tbody>
    </table>
-
    </div>
   </div>  
 
