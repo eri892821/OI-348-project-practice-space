@@ -1,3 +1,11 @@
+.SavingGoals-page {
+  background: #2b2b2b;
+  color: white;
+  min-height: 100vh;
+  padding: 24px;
+  text-align: left;
+}
+
 .goal-card {
   background: #1a1a1a;
   color: white;
@@ -23,4 +31,77 @@
   font-weight: bold;
   border-radius: 999px; /* fully rounded ends */
   padding: 6px 16px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.goal-form {
+  margin-top: 24px;
+  background: #1a1a1a;
+  color: white;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+}
+
+.goal-form h3 {
+  margin: 0 0 16px 0;
+  text-align: left;
+}
+
+.goal-form form {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.goal-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.goal-field label {
+  color: #9ca3af;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.goal-field input {
+  background: #2e2e2e;
+  color: #d1d5db;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.pill-option {
+  background: #2e2e2e;
+  color: #d1d5db;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.pill-option.chosen {
+  background: #e8eefc;
+  color: #0e63c5;
+  font-weight: bold;
+}
+
+.create-btn {
+  background: #0e63c5;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  cursor: pointer;
 }
