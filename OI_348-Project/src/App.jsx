@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import SavingsGoals from './SavingsGoals'
+import SavingGoals from './SavingGoals'
 
 function App(){
-return <Budgets/>
+return <SavingGoals/>
 }
 
 export default App
