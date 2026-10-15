@@ -96,43 +96,54 @@ function Budgets (){
    </table>
   </div>  
 
-  <div style ={{ marginTop: 24}}>
-     <div className="form-box">
-     <h3>Create a new budget</h3>
-        <form onSubmit={handleSubmit}>
-          <select value={category} onChange={(e) => setCategory(e.target.value)} required>
-            <option value="">Select category</option>
-            <option value="Transport">Transport</option>
-            <option value="Groceries">Groceries</option>
-            <option value="Entertainment">Entertainment</option>
-          </select>
+ {/* FORM BOX: dark rounded container */}
+<div className="form-box">
+  <h3>Create a new budget</h3>
 
-          <input
-            type="number"
-            placeholder="R 0.00"
-            value={target}
-            onChange={(e) => setTarget(e.target.value)}
-            required
-          />
+  <form onSubmit={handleSubmit}>
+    {/* Field 1: category */}
+    <div className="form-field">
+      <label>Category</label>
+      <select value={category} onChange={(e) => setCategory(e.target.value)} required>
+        <option value="">Select category</option>
+        <option value="Transport">Transport</option>
+        <option value="Groceries">Groceries</option>
+        <option value="Entertainment">Entertainment</option>
+      </select>
+    </div>
+   
 
-          <input
-            type="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            required
-          />
+    {/* Field 2: target amount */}
+    <div className="form-field">
+      <label>Target amount</label>
+      <input
+        type="number"
+        placeholder="R 0.00"
+        value={target}
+        onChange={(e) => setTarget(e.target.value)}
+        required
+      />
+    </div>
 
-          <button type="submit">Create</button>
-        </form>
-      </div>
-   </div> 
-   </div>
+    {/* Field 3: target date */}
+    <div className="form-field">
+      <label>Target date</label>
+      <input
+        type="date"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
+        required
+      />
+    </div>
+
+    <button type="submit">Create</button>
+  </form>
 </div>
-
-
-
-
-  )
+</div>
+</div>
+)
 }
+
+
 export default Budgets
 
