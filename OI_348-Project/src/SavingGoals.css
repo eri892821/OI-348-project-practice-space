@@ -1,0 +1,26 @@
+.goal-card {
+  background: #1a1a1a;
+  color: white;
+  border-radius: 12px;
+  padding: 16px;
+  width: 260px;
+}
+
+.goal-top {
+  display: flex;        /* icon, name and icons in one row */
+  align-items: center;
+  gap: 8px;
+}
+
+.goal-top h3 {
+  flex: 1;              /* name takes the free space, pushing the icons right */
+  margin: 0;
+}
+
+.pill {
+  background: #e8eefc;
+  color: #0e63c5;
+  font-weight: bold;
+  border-radius: 999px; /* fully rounded ends */
+  padding: 6px 16px;
+}

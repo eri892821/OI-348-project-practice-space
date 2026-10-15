@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import { FaPiggyBank, FaEdit, FaTrash } from 'react-icons/fa'
+import './SavingGoals.css'
 
 const accountoptions=['Current Account', 'Savings', 'Credit Card', 'Cash']
 
