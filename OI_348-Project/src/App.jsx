@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Budgets from './Budgets'
+import SavingsGoals from './SavingsGoals'
 
 function App(){
 return <Budgets/>
