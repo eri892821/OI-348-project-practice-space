@@ -5,6 +5,10 @@
   padding: 24px;
 }
 
+.budgets-page h1 {
+  text-align:left;
+}
+
 .card{
     padding: 16px;
     width:180px;
@@ -32,9 +36,6 @@
 .table-box td{
     border-top : 1px solid #333;
 }
-
-  
-
 
 /* The dark rounded box around the form */
 .form-box {
