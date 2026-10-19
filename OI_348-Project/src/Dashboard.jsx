@@ -1,4 +1,6 @@
 import {useState} from 'react'
+import savings from './assets/Gemini_Generated_Image_u9cddpu9cddpu9cd.jpeg'
+import credit from './assets/Gemini_Generated_Image_sq2pjesq2pjesq2p.jpeg'
 
 const Dashboard =()=>{
 
