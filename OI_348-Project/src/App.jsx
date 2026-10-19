@@ -7,7 +7,7 @@ import dashboardImg from './assets/Gemini_Generated_Image_27pdd327pdd327pd.jpg'
 import savingGoalsImg from './assets/Gemini_Generated_Image_59avso59avso59av.jpg'
 
 import Dashboard from './Dashboard'
-import Budget from './Budget'
+import Budgets from './Budgets'
 import SavingGoals from './SavingGoals'
 
 const linkClass = ({ isActive }) =>
