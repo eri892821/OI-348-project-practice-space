@@ -4,7 +4,7 @@ import SavingGoals from './SavingGoals';
 function App() {
   return (
     <div>
-      <SavingsGoals />
+      <SavingGoals />
     </div>
   );
 }
