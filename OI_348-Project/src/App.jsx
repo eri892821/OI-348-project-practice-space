@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import SavingGoals from './SavingGoals';
 
-const Sidebar =({})=>{
+const Sidebar =({setPage})=>{
 
   return(
 
@@ -14,7 +14,7 @@ const Sidebar =({})=>{
       <nav className="flex flex-col gap-4">
 
         <div>
-          <button onClick={() => console.log('Dashboard clicked')} className="flex items-center gap-3 text-sm text-white/80 hover:text-white transition-colors">
+          <button onClick={() => setPage('dashboard')} className="flex items-center gap-3 text-sm text-white/80 hover:text-white transition-colors">
             <img src={dashboardLogo} alt = "Dasboard logo" className ="dashboard-icon w-8 h-8 object-cover rounded-md" />
             Dashboard
           </button>
@@ -35,7 +35,7 @@ const Sidebar =({})=>{
         </div>
 
         <div className="text-sm text-white/80">
-          <button onClick={() => console.log('Saving goals clicked')} className="flex items-center gap-3 text-sm text-white/80 hover:text-white transition-colors">
+          <button onClick={() => setPage('goals')} className="flex items-center gap-3 text-sm text-white/80 hover:text-white transition-colors">
             <img src={savingGoals} alt = "Saving goals logo" className ="w-8 h-8 object-cover rounded-md" />
             Saving goals
           </button>
@@ -55,12 +55,18 @@ const Sidebar =({})=>{
 
 }
 
-function App() {
+const App = () => {
+  const [page, setPage] = useState('dashboard')
+
   return (
-    <div>
-      <SavingGoals />
+    <div className="flex min-h-screen w-screen m-0 p-0">
+      <Sidebar setPage={setPage} />
+      <main className="flex-1 bg-[#282828] min-h-screen text-white p-8">
+        {page === 'dashboard' && <Dashboard />}
+        {page === 'goals' && <SavingGoals />}
+      </main>
     </div>
-  );
+  )
 }
 
 export default App;
